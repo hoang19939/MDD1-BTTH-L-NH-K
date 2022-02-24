@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1 id="yr"></h1>
+<input id="st1" type="text">
+<button onclick="year1()">click here</button>
+<body>
+<script>
+    function year1() {
+
+        let year1=document.getElementById('st1').value;
+        let result = "";
+        if (year1%4===0) {
+            if(year1%100===0) {
+                if(year1%400===0) {
+                    result = "is a leap year";
+                } else {
+                    result = "is not a leap year";
+                }
+            } else {
+                result = "is a leap year";
+            }
+
+        }else {
+            result='is not a leap year'
+
+        }
+        document.getElementById('yr').innerHTML= result;
+
+    }
+
+
+
+</script>
+</body>
+</html>
